@@ -52,7 +52,7 @@ public class Money implements ValueObject {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Money money = (Money) o;
-        return this.amount.equals(money.amount) && this.currency.equals(money.currency);
+        return amount.equals(money.amount) && currency == money.currency;
     }
 
     @Override
