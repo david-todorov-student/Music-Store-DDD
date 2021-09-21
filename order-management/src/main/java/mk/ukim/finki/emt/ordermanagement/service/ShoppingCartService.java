@@ -5,6 +5,7 @@ import mk.ukim.finki.emt.ordermanagement.domain.exceptions.ShoppingCartIdDoesNot
 import mk.ukim.finki.emt.ordermanagement.domain.model.OrderItemId;
 import mk.ukim.finki.emt.ordermanagement.domain.model.ShoppingCart;
 import mk.ukim.finki.emt.ordermanagement.domain.model.ShoppingCartId;
+import mk.ukim.finki.emt.ordermanagement.domain.valueobjects.ProductId;
 import mk.ukim.finki.emt.ordermanagement.service.forms.OrderItemForm;
 import mk.ukim.finki.emt.ordermanagement.service.forms.ShoppingCartForm;
 
@@ -13,7 +14,7 @@ import java.util.Optional;
 
 public interface ShoppingCartService {
 
-    ShoppingCartId placeOrder(ShoppingCartForm shoppingCartForm);
+    ShoppingCartId openShoppingCart(ShoppingCartForm shoppingCartForm);
 
     List<ShoppingCart> findAll();
 
@@ -23,4 +24,5 @@ public interface ShoppingCartService {
 
     void deleteItem(ShoppingCartId shoppingCartId, OrderItemId orderItemId) throws ShoppingCartIdDoesNotExistException, OrderItemIdDoesNotExistException;
 
+    void deleteItemsWithProductId(ProductId productId);
 }

@@ -13,11 +13,15 @@
         <module name="ddd-music-shop" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="security-management" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="order-management" options="-parameters" />
       <module name="product-module" options="-parameters" />
+      <module name="security-management" options="-parameters" />
       <module name="shared-kernel" options="-parameters" />
     </option>
   </component>
